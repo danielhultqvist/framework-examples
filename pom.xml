@@ -10,6 +10,7 @@
 
     <modules>
         <module>webservers/common</module>
+        <module>webservers/dropwizard</module>
         <module>webservers/javalin</module>
         <module>webservers/spring-mvc</module>
         <module>webservers/spring-webflux</module>

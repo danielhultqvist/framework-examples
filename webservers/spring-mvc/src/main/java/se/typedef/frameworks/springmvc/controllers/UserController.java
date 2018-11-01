@@ -17,6 +17,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 @RestController
 public class UserController {
 
@@ -28,7 +30,7 @@ public class UserController {
 
   @GetMapping("/users")
   public List<UserDTO> getAllUsers() {
-    return userRepository.getAllUsers().stream().map(UserDTO::new).collect(Collectors.toList());
+    return userRepository.getAllUsers().stream().map(UserDTO::new).collect(toList());
   }
 
   @GetMapping("/user/{id}")
